@@ -1,7 +1,7 @@
 version: '3'
 services:
   tts_server:
-    image: harbor.cowarobot.cn/voyance/tts_server:20240112
+    image: {harbor}/{repository}/tts_server
     restart: always
     ports:
       - "40000:40004"

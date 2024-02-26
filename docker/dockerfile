@@ -1,5 +1,5 @@
 #定义基础镜像
-FROM harbor.cowarobot.com/voyance/rust-builder AS build
+FROM {harbor}/{repository}/rust-builder AS build
 
 WORKDIR /work
 #拷贝源代码
@@ -8,7 +8,7 @@ ENV TFLITE_LIB_DIR /work/tflite-rs/submodules/deps/
 
 RUN cargo build --release --quiet --bin tts_server
 
-FROM harbor.cowarobot.cn/library/ubuntu:20.04
+FROM ubuntu:20.04
 
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
