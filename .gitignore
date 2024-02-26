@@ -1,0 +1,12 @@
+target
+Cargo.lock
+.vscode/
+.idea/
+logs/
+docker/bin/
+*.so
+logs
+*.wav
+assets/
+models/
+*.bin
