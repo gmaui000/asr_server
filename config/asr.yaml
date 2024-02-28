@@ -1,5 +1,0 @@
-- !Config
-  log_path: ./logs
-  ip: 0.0.0.0
-  port: 40005
-

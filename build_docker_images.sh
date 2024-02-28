@@ -34,9 +34,9 @@ platform=`arch`
 echo "auto select arch:${platform}" 
 
 #镜像仓库地址
-repository="{harbor}/{repository}"
+repository="harbor.cowarobot.com"
 #仓库名称
-namespace="{repository}"
+namespace="voyance"
 #项目名称
 packagename="asr_server"
 
@@ -45,12 +45,7 @@ imagename=$repository/$namespace/$packagename
 datetime=$(date +%Y%m%d)
 case $type in
 	'build')
-		if [ -e "target/release/asr_server" ]; then
-			cargo build --release --bin asr_server
-			docker buildx build $option --platform=$platform --network=host -f docker/dockerfile.nobuild -t $imagename:$datetime .
-		else
-		    docker buildx build $option --platform=$platform --network=host -f docker/dockerfile -t $imagename:$datetime .
-		fi
+		docker buildx build $option --platform=$platform --network=host -t $imagename:$datetime .
         ;;
 	'push')
 		echo "push to dst registry"

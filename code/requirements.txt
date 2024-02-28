@@ -1,0 +1,10 @@
+flask
+gevent
+av
+ctranslate2
+huggingface_hub
+tokenizers
+onnxruntime
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
+faster-whisper
