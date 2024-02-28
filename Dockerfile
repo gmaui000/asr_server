@@ -1,11 +1,11 @@
 #FROM ubuntu:22.04
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:11.8.0-runtime-ubuntu22.04
 WORKDIR /work/
 
 ENV TZ=Asia/Shanghai
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
-ARG USER=tts
-ARG USERPWD=tts
+ARG USER=asr
+ARG USERPWD=asr
 
 RUN sed -i s@archive.ubuntu.com@mirrors.aliyun.com@g /etc/apt/sources.list
 RUN sed -i s@security.ubuntu.com@mirrors.aliyun.com@g /etc/apt/sources.list
