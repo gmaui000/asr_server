@@ -1,7 +1,7 @@
 version: '3'
 services:
   asrserver:
-    image: harbor.cowarobot.com/voyance/asr_server:20240228
+    image: {harbor_url}/{repository}/asr_server
     ports:
       - "40005:40005"
     runtime: runc
@@ -14,8 +14,6 @@ services:
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=all
     privileged: true
-    volumes:
-      - ./code:/work/code
     deploy:
       resources:
         reservations:

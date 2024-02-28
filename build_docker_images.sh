@@ -34,9 +34,9 @@ platform=`arch`
 echo "auto select arch:${platform}" 
 
 #镜像仓库地址
-repository="harbor.cowarobot.com"
+repository="{harbor_url}"
 #仓库名称
-namespace="voyance"
+namespace="{repository}"
 #项目名称
 packagename="asr_server"
 

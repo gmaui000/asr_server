@@ -90,6 +90,6 @@ def index():
     return Response(tracker.to_table_string(), mimetype='text/html')
 
 if __name__ == "__main__":
-    #server = pywsgi.WSGIServer(('0.0.0.0',40000),app,keyfile='certs/9002040_tts.cowarobot.com.key', certfile='certs/9002040_tts.cowarobot.com.crt')
+    #server = pywsgi.WSGIServer(('0.0.0.0',40000),app,keyfile='certs/asr.com.key', certfile='certs/asr.com.crt')
     server = pywsgi.WSGIServer(('0.0.0.0',40005),app)
     server.serve_forever()
