@@ -8,5 +8,4 @@ docker/bin/
 logs
 *.wav
 assets/
-models/
 *.bin
